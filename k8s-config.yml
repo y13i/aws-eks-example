@@ -1,0 +1,25 @@
+# Replace `<<HERE>>`s below.
+apiVersion: v1
+clusters:
+- cluster:
+    server: <<HERE>> # from CFn output value: `EKSClusterEndpoint`
+    certificate-authority-data: <<HERE>> # from CFn output value `EKSClusterCertificateAuthorityData`
+  name: kubernetes
+contexts:
+- context:
+    cluster: kubernetes
+    user: aws
+  name: aws
+current-context: aws
+kind: Config
+preferences: {}
+users:
+- name: aws
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      command: ./heptio-authenticator-aws
+      args:
+      - "token"
+      - "-i"
+      - <<HERE>> # from CFn output value `EKSClusterCertificateName`
