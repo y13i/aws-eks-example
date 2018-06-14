@@ -1,11 +1,11 @@
 # AWS EKS Example
 
-This is a **shortened version** of [Get Started](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html).
+This is a **shortened version** of the [Get Started](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html).
 
 - No manual operation from the Management Console.
 - CFn stacks merged into one.
 - 2 public subnets and 2 private subnets (with NAT gateways).
-- Worker nodes launches into private subnets.
+- Worker nodes launch into private subnets.
 - Renamed some files and resources.
 
 ## Install tools
