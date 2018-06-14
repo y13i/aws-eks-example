@@ -6,7 +6,7 @@ metadata:
   namespace: kube-system
 data:
   mapRoles: |
-    - rolearn: <<HERE>> # from CFn output value ``
+    - rolearn: <<HERE>> # from CFn output value `NodeInstanceRole`
       username: system:node:{{EC2PrivateDNSName}}
       groups:
       - system:bootstrappers
